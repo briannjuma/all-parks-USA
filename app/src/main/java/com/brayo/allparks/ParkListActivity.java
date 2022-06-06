@@ -7,11 +7,13 @@ import androidx.databinding.DataBindingUtil;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.brayo.allparks.databinding.ActivityParkListBinding;
 
 public class ParkListActivity extends AppCompatActivity {
     private ActivityParkListBinding binding;
+    private final String[] nationalParkNames = {"Allegheny Portage Railroad National", "American Memorial Park", "Amistad National Recreation Area", "Anacostia Park", "Andersonville Historic", "Bluestone Scenic", "Mount Rainer National", "Roosevelt National Recreation"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,11 +22,13 @@ public class ParkListActivity extends AppCompatActivity {
 
         Log.i(TAG, "List of National Parks Activity opened");
 
-
-
+        // Retrieve data from state reference Activity and edit Action Bar title
         if (getIntent().getStringExtra("state") != null) {
             String title = getIntent().getStringExtra("state");
             setTitle("National Parks in " + title);
+            Toast.makeText(ParkListActivity.this,"Displaying List of National Parks",Toast.LENGTH_SHORT).show();
+
         }
+
     }
 }
