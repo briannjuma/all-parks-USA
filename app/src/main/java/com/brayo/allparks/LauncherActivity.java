@@ -20,6 +20,9 @@ public class LauncherActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_launcher);
+
+        Log.i(TAG, "Launcher Activity opened");
+
         binding.launcherButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
