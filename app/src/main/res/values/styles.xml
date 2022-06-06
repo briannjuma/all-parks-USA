@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="launcherText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">52dp</item>
+        <item name="android:fontFamily">@font/kadwa_bold</item>
+        <item name="android:foregroundGravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:shadowColor">@color/black</item>
+        <item name="android:shadowDx">4</item>
+        <item name="android:shadowDy">8</item>
+        <item name="android:shadowRadius">3</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Large</item>
+        <item name="android:textColor">@color/Encyloperdia</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="LauncherParagraph" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">335dp</item>
+        <item name="android:layout_height">170dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:fontFamily">@font/just_me_again_down_here</item>
+        <item name="android:foregroundGravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="stateCode">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>
