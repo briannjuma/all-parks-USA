@@ -25,8 +25,8 @@ public class LauncherActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(LauncherActivity.this, UserProfileActivity.class);
                 startActivity(intent);
-                Log.i(TAG,"Navigating to UserProfileActivity ...");
-                Toast.makeText(LauncherActivity.this,"Navigating to User Profile",Toast.LENGTH_SHORT).show();
+                Log.i(TAG,"Navigating to State Code Reference Activity ...");
+                Toast.makeText(LauncherActivity.this,"Navigating to State Code Reference",Toast.LENGTH_SHORT).show();
             }
         });
     }

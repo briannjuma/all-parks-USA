@@ -31,15 +31,8 @@
 
         <TextView
             android:id="@+id/applicationDescriptionTextView"
-            style="@style/Widget.AppCompat.TextView"
-            android:layout_width="335dp"
-            android:layout_height="170dp"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/just_me_again_down_here"
-            android:foregroundGravity="center"
-            android:gravity="center"
+            style="@style/LauncherParagraph"
             android:text="@string/applicationDescriptionTextView"
-            android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"

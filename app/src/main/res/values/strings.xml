@@ -4,7 +4,62 @@
     <string name="launcherTitle">allParks-USA</string>
     <string name="applicationDescriptionTextView">Discover the unique and beautiful nature, wildlife and culture in the heart of United States of America.</string>
     <string name="launcherButton">Get-Started</string>
-    <string name="activity2Title">National Parks</string>
+    <string name="activity2Title">State Code</string>
     <string name="activity2Paragraph">A national park is an area set aside by a national government for the preservation of the natural environment. A national park may be set aside for public recreation and enjoyment or for its historical or scientific interest while keeping most landscapes and their accompanying plants and animals in their natural state.</string>
     <string name="activity2Button">Discover Parks</string>
+    <string name="stateCodeHint">Enter state code:  WA,TX</string>
+    <string name="stateCode1">
+        01 	Alabama     -AL
+    \n    02 	Alaska  - AK
+    \n    03 	Arizona     - AZ
+    \n    04 	Arkansas    - AR
+    \n    05 	California  - CA
+    \n    06 	Colorado    - CO
+    \n    07 	Connecticut - CT
+    \n    08 	Delaware    - DE
+    \n    09 	District of Columbia   - DC
+    \n    10 	Florida     - FL
+    \n    11 	Georgia     - GA
+    \n    12 	Hawaii      - HI
+    \n    13 	Idaho 		- ID
+    \n    14 	Illinois 	- IL
+    \n    15 	Indiana 	- IN
+    \n    16 	Iowa 		- IA
+    \n    17 	Kansas 	    - KS
+    \n    18 	Kentucky    - KY
+    \n    19 	Louisiana 	- LA
+    \n    20 	Maine   	- ME
+    \n    21 	Maryland 	- MD
+    \n    22 	Massachusetts 	- MA
+    \n    23 	Michigan 	- MI
+    \n    24 	Minnesota 	- MN
+    \n    25 	Mississippi - MS
+    \n    26 	Missouri 	- MO
+    \n    27 	Montana 	- MT
+    \n    28 	Nebraska 	- NE
+    \n    29 	Nevada 	    - NV
+    \n    30 	New Hampshire - NH
+    \n    31 	New Jersey   - NJ
+    \n    32 	New Mexico  - NM
+    \n    33 	New York 	- NY
+    \n    34 	North Carolina 	- NC
+    \n    35 	North Dakota 	- ND
+    \n    36 	Ohio 	- OH
+    \n    37 	Oklahoma    -   OK
+    \n    38 	Oregon  -   OR
+    \n    39 	Pennsylvania    -   PA
+    \n    40 	Rhode Island    -   RI
+    \n    41 	South Carolina  -   SC
+    \n    42 	South Dakota    -   SD
+    \n    43 	Tennessee   -   TN
+    \n    44 	Texas   -   TX
+    \n    45 	Utah    -   UT
+    \n    46 	Vermont     -   VT
+    \n    47 	Virginia    -   VA
+    \n    48 	Washington    -   WA
+    \n    49 	West Virginia   -   WV
+    \n    50 	Wisconsin   -   WI
+    \n    51 	Wyoming     -   WY
+    </string>
+
 </resources>
