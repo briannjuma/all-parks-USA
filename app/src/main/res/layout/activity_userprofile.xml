@@ -47,7 +47,7 @@
         </ScrollView>
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/editTextStateCode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="56dp"
@@ -62,7 +62,7 @@
             app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/discoverParksButton"
             android:layout_width="411dp"
             android:layout_height="76dp"
             android:layout_marginTop="95dp"
@@ -72,7 +72,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextStateCode" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
