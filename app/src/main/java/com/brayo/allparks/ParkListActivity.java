@@ -18,7 +18,13 @@ public class ParkListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_park_list);
 
-
         Log.i(TAG, "List of National Parks Activity opened");
+
+
+
+        if (getIntent().getStringExtra("state") != null) {
+            String title = getIntent().getStringExtra("state");
+            setTitle("National Parks in " + title);
+        }
     }
 }

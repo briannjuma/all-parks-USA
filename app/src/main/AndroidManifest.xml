@@ -27,7 +27,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".UserProfileActivity"
+            android:name=".StateReferenceActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
