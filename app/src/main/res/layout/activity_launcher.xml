@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/Pantone"
     tools:context=".LauncherActivity">
 
     <ImageView
         android:id="@+id/logoImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="68dp"
         android:contentDescription="@string/launcherImage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -20,26 +21,25 @@
 
     <TextView
         android:id="@+id/applicationNameTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:foregroundGravity="center"
-        android:gravity="center"
         android:text="@string/launcherTitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logoImageView" />
+        app:layout_constraintTop_toBottomOf="@+id/logoImageView"
+        style="@style/launcherText" />
 
     <TextView
         android:id="@+id/applicationDescriptionTextView"
-        android:layout_width="300dp"
-        android:layout_height="125dp"
-        android:layout_marginTop="64dp"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="335dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/just_me_again_down_here"
         android:foregroundGravity="center"
         android:gravity="center"
         android:text="@string/applicationDescriptionTextView"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/applicationNameTextView" />
 

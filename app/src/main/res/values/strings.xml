@@ -3,5 +3,5 @@
     <string name="launcherImage">logoImageView</string>
     <string name="launcherTitle">allParks-USA</string>
     <string name="applicationDescriptionTextView">Discover the unique and beautiful nature, wildlife and culture in the heart of United States of America.</string>
-    <string name="launcherButton">GET-STARTED</string>
+    <string name="launcherButton">Get-Started</string>
 </resources>
