@@ -11,6 +11,8 @@ import android.widget.Toast;
 
 import com.brayo.allparks.databinding.ActivityParkListBinding;
 
+import adapter.ParkListAdapter;
+
 public class ParkListActivity extends AppCompatActivity {
     private ActivityParkListBinding binding;
     private final String[] nationalParkNames = {"Allegheny Portage Railroad National", "American Memorial Park", "Amistad National Recreation Area", "Anacostia Park", "Andersonville Historic", "Bluestone Scenic", "Mount Rainer National", "Roosevelt National Recreation"};
@@ -29,7 +31,10 @@ public class ParkListActivity extends AppCompatActivity {
             Toast.makeText(ParkListActivity.this,"Displaying List of National Parks",Toast.LENGTH_SHORT).show();
         }
 
-
-
+        initializeAdapter();
+    }
+    private void initializeAdapter(){
+        ParkListAdapter adapter = new ParkListAdapter(getApplicationContext(), android.R.layout.simple_list_item_1, nationalParkNames);
+        binding.parksListView.setAdapter(adapter);
     }
 }
