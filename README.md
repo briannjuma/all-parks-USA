@@ -9,6 +9,15 @@ Users will be able to :~
 * View list of National Parks
 * Check Park details.
 
+## User Journey Demo -week one
+
+  <video src= "https://user-images.githubusercontent.com/98020785/172263875-3a00985e-86a6-4236-9372-11917bdfd4e8.mp4
+" controls></video>
+  
+
+
+
+
 ## Prerequisites
 To make use of this repository you should have the following installed on your machine.
 * Android Studio - official IDE for android development.
