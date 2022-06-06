@@ -15,6 +15,8 @@ import com.brayo.allparks.databinding.ActivityStatereferenceBinding;
 
 import java.util.Objects;
 
+import javax.xml.validation.Validator;
+
 
 public class StateReferenceActivity extends AppCompatActivity {
     private ActivityStatereferenceBinding binding;
@@ -32,20 +34,27 @@ public class StateReferenceActivity extends AppCompatActivity {
         binding.discoverParksButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(StateReferenceActivity.this, ParkListActivity.class);
 
                 // Retrieve State Input
-                String state = binding.editTextStateCode.getText().toString().trim();
+                String state = Objects.requireNonNull(binding.editTextStateCode).getText().toString().trim();
 
-                Intent intent = new Intent(StateReferenceActivity.this, ParkListActivity.class);
-                intent.putExtra("state", state);
-                startActivity(intent);
-                Log.i(TAG,"Navigating to Park List Activity ...");
-                Toast.makeText(StateReferenceActivity.this,"Navigating to List of National Parks",Toast.LENGTH_SHORT).show();
-
-
+                // Validate input
+                validateUserInput(intent, state);
 
             }
 
         });
+    }
+
+    private void validateUserInput(Intent intent, String state){
+        if (state.isEmpty()){
+            Toast.makeText(StateReferenceActivity.this,"Please check your state input it should not be empty",Toast.LENGTH_SHORT).show();
+        } else {
+            intent.putExtra("state", state);
+            startActivity(intent);
+            Log.i(TAG,"Navigating to Park List Activity ...");
+            Toast.makeText(StateReferenceActivity.this,"Navigating to List of National Parks",Toast.LENGTH_SHORT).show();
+        }
     }
 }
