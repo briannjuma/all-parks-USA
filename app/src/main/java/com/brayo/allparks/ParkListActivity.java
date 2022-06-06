@@ -7,6 +7,7 @@ import androidx.databinding.DataBindingUtil;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.brayo.allparks.databinding.ActivityParkListBinding;
@@ -32,9 +33,17 @@ public class ParkListActivity extends AppCompatActivity {
         }
 
         initializeAdapter();
+        initializeOnClickListener();
     }
+
     private void initializeAdapter(){
         ParkListAdapter adapter = new ParkListAdapter(getApplicationContext(), android.R.layout.simple_list_item_1, nationalParkNames);
         binding.parksListView.setAdapter(adapter);
+    }
+
+    private void initializeOnClickListener(){
+        binding.parksListView.setOnClickListener((adapterView, view, i, l) -> {
+            String nationalPark = ((TextView)view).getText().toString();
+        });
     }
 }
