@@ -27,8 +27,9 @@ public class ParkListActivity extends AppCompatActivity {
             String title = getIntent().getStringExtra("state");
             setTitle("National Parks in " + title);
             Toast.makeText(ParkListActivity.this,"Displaying List of National Parks",Toast.LENGTH_SHORT).show();
-
         }
+
+
 
     }
 }
