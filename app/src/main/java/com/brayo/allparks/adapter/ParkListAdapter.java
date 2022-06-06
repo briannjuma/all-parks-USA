@@ -1,4 +1,4 @@
-package adapter;
+package com.brayo.allparks.adapter;
 
 import android.content.Context;
 import android.widget.ArrayAdapter;

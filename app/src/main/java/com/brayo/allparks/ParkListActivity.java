@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import com.brayo.allparks.databinding.ActivityParkListBinding;
 
-import adapter.ParkListAdapter;
+import com.brayo.allparks.adapter.ParkListAdapter;
 
 public class ParkListActivity extends AppCompatActivity {
     private ActivityParkListBinding binding;
