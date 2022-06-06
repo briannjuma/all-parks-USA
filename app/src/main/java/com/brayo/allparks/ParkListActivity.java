@@ -14,6 +14,7 @@ import com.brayo.allparks.databinding.ActivityParkListBinding;
 
 import com.brayo.allparks.adapter.ParkListAdapter;
 
+
 public class ParkListActivity extends AppCompatActivity {
     private ActivityParkListBinding binding;
     private final String[] nationalParkNames = {"Allegheny Portage Railroad National", "American Memorial Park", "Amistad National Recreation Area", "Anacostia Park", "Andersonville Historic", "Bluestone Scenic", "Mount Rainer National", "Roosevelt National Recreation"};
@@ -42,8 +43,10 @@ public class ParkListActivity extends AppCompatActivity {
     }
 
     private void initializeOnClickListener(){
-        binding.parksListView.setOnClickListener((adapterView, view, i, l) -> {
-            String nationalPark = ((TextView)view).getText().toString();
+        binding.parksListView.setOnItemClickListener((adapterView, view, i, l) -> {
+            String nationalPark;
+            nationalPark = ((TextView)view).getText().toString();
+            Toast.makeText(getApplicationContext(), nationalPark, Toast.LENGTH_SHORT).show();
         });
     }
 }
