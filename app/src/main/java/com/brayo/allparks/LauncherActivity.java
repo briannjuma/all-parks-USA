@@ -26,7 +26,7 @@ public class LauncherActivity extends AppCompatActivity {
         binding.launcherButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LauncherActivity.this, StateReferenceActivity.class);
+                Intent intent = new Intent(LauncherActivity.this, MainActivity.class);
                 startActivity(intent);
                 Log.i(TAG,"Navigating to State Code Reference Activity ...");
                 Toast.makeText(LauncherActivity.this,"Navigating to State Code Reference",Toast.LENGTH_SHORT).show();
