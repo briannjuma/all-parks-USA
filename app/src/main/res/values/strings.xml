@@ -61,5 +61,7 @@
     \n    50 	Wisconsin   -   WI
     \n    51 	Wyoming     -   WY
     </string>
+    <string name="map_nav_button">Map</string>
+    <string name="parks_nav_button">Parks</string>
 
 </resources>
