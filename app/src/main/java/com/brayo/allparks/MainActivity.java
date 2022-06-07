@@ -2,13 +2,17 @@ package com.brayo.allparks;
 
 import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-
 import android.os.Bundle;
 import android.util.Log;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+import androidx.fragment.app.Fragment;
+
 import com.brayo.allparks.databinding.ActivityMainBinding;
+import com.brayo.allparks.fragments.ParksFragment;
+import com.brayo.allparks.fragments.ReferenceFragment;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
@@ -18,7 +22,29 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-
         Log.i(TAG, "Main Activity opened");
+
+
+        BottomNavigationView bottomNavigationView = binding.bottomNavigation;
+        //noinspection deprecation
+        bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
+
+            Fragment selectedFragment = null;
+
+            int id = item.getItemId();
+            if (id == R.id.maps_nav_button) {
+                // show reference fragment
+                selectedFragment = ReferenceFragment.newInstance();
+            } else if (id == R.id.parks_nav_button) {
+                // show Park fragment
+                selectedFragment = ParksFragment.newInstance();
+
+            }
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.referenceContainerView, selectedFragment)
+                    .commit();
+
+            return true;
+        });
     }
 }
