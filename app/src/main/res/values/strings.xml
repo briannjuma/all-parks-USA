@@ -63,5 +63,7 @@
     </string>
     <string name="map_nav_button">Map</string>
     <string name="parks_nav_button">Parks</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
