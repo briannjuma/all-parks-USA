@@ -29,7 +29,7 @@ public class ParkListActivity extends AppCompatActivity {
         // Retrieve data from state reference Activity and edit Action Bar title
         if (getIntent().getStringExtra("state") != null) {
             String title = getIntent().getStringExtra("state");
-            setTitle("National Parks in " + title);
+            setTitle("Welcome " + title);
             Toast.makeText(ParkListActivity.this,"Displaying List of National Parks",Toast.LENGTH_SHORT).show();
         }
 
