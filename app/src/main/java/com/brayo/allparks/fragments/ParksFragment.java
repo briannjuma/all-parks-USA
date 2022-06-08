@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.brayo.allparks.R;
+import com.brayo.allparks.adapter.OnParkClickListener;
 import com.brayo.allparks.adapter.ParkRecyclerViewAdapter;
 import com.brayo.allparks.data.AsyncResponse;
 import com.brayo.allparks.data.Repository;
@@ -24,7 +25,7 @@ import com.brayo.allparks.models.Park;
 import java.util.List;
 
 
-public class ParksFragment extends Fragment {
+public class ParksFragment extends Fragment implements OnParkClickListener {
     private RecyclerView recyclerView;
     private ParkRecyclerViewAdapter parkRecyclerViewAdapter;
     private List<Park> parkList;
@@ -69,6 +70,10 @@ public class ParksFragment extends Fragment {
     @Override
     public void onParkClicked(Park park) {
         Log.d("Park", "onParkClicked: " + park.getName());
+        //noinspection deprecation
+        getFragmentManager().beginTransaction()
+                .replace(R.id.park_fragment, DetailsFragment.newInstance())
+                .commit();
 
     }
 }
