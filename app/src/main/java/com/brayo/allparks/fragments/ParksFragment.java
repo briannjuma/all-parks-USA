@@ -1,5 +1,7 @@
 package com.brayo.allparks.fragments;
 
+import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
+
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -8,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,7 +49,7 @@ public class ParksFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         Repository.getParks(parks -> {
-            parkRecyclerViewAdapter = new ParkRecyclerViewAdapter(parks);
+            parkRecyclerViewAdapter = new ParkRecyclerViewAdapter(parks, this);
             recyclerView.setAdapter(parkRecyclerViewAdapter);
 
         });
@@ -62,4 +65,11 @@ public class ParksFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         return view;
     }
+
+    @Override
+    public void onParkClicked(Park park) {
+        Log.d("Park", "onParkClicked: " + park.getName());
+
+    }
 }
+
