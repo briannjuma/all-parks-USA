@@ -11,6 +11,7 @@ Users will be able to :~
 
 ## User Journey Demo
   <video src= "https://user-images.githubusercontent.com/98020785/172264323-850fdbb0-6faa-419d-ab85-dd512beb421f.mp4" controls></video>
+  <video src= "https://user-images.githubusercontent.com/98020785/172540055-a5fa7bf8-4160-47bf-a381-4dc77e53577c.mp4" controls></video>
 
 ## Prerequisites
 To make use of this repository you should have the following installed on your machine.
