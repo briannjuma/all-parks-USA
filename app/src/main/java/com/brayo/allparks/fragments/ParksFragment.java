@@ -31,7 +31,7 @@ public class ParksFragment extends Fragment {
 
     public ParksFragment() {
         // Required empty public constructor
-    }
+        }
 
 
     public static ParksFragment newInstance() {

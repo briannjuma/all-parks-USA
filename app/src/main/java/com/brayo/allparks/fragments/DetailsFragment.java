@@ -10,15 +10,14 @@ import android.view.ViewGroup;
 
 import com.brayo.allparks.R;
 
-public class ReferenceFragment extends Fragment {
+public class DetailsFragment extends Fragment {
 
-    public ReferenceFragment() {
+    public DetailsFragment() {
         // Required empty public constructor
     }
 
-
-    public static ReferenceFragment newInstance() {
-        ReferenceFragment fragment = new ReferenceFragment();
+    public static DetailsFragment newInstance() {
+        DetailsFragment fragment = new DetailsFragment();
 
         return fragment;
     }
@@ -33,6 +32,6 @@ public class ReferenceFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_reference, container, false);
+        return inflater.inflate(R.layout.fragment_details, container, false);
     }
 }

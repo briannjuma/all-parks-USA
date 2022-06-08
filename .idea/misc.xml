@@ -8,6 +8,7 @@
         <entry key="app/src/main/res/layout/activity_park_list.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_statereference.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/activity_userprofile.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_details.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/fragment_parks.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/fragment_reference.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/park_row.xml" value="0.18072916666666666" />
