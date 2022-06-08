@@ -29,7 +29,7 @@ public class LauncherActivity extends AppCompatActivity {
                 Intent intent = new Intent(LauncherActivity.this, MainActivity.class);
                 startActivity(intent);
                 Log.i(TAG,"Navigating to State Code Reference Activity ...");
-                Toast.makeText(LauncherActivity.this,"Navigating to State Code Reference",Toast.LENGTH_SHORT).show();
+                Toast.makeText(LauncherActivity.this,"Discover all national parks USA",Toast.LENGTH_SHORT).show();
             }
         });
     }
