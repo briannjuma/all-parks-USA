@@ -29,12 +29,13 @@ public class MainActivity extends AppCompatActivity {
         //noinspection deprecation
         bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
 
-            Fragment selectedFragment = null;
+            Fragment selectedFragment = ReferenceFragment.newInstance();
 
             int id = item.getItemId();
             if (id == R.id.maps_nav_button) {
                 // show reference fragment
                 selectedFragment = ReferenceFragment.newInstance();
+
             } else if (id == R.id.parks_nav_button) {
                 // show Park fragment
                 selectedFragment = ParksFragment.newInstance();
