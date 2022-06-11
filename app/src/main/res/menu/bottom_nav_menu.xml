@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/maps_nav_button"
+        android:id="@+id/reference_nav_button"
         android:icon="@drawable/ic_baseline_menu_book_24"
         app:showAsAction="ifRoom"
         android:title="@string/map_nav_button" />

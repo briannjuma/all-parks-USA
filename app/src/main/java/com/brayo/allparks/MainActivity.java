@@ -29,10 +29,11 @@ public class MainActivity extends AppCompatActivity {
         //noinspection deprecation
         bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
 
-            Fragment selectedFragment = ReferenceFragment.newInstance();
+            Fragment selectedFragment = null;
 
             int id = item.getItemId();
-            if (id == R.id.maps_nav_button) {
+
+            if (id == R.id.reference_nav_button) {
                 // show reference fragment
                 selectedFragment = ReferenceFragment.newInstance();
 
@@ -40,7 +41,10 @@ public class MainActivity extends AppCompatActivity {
                 // show Park fragment
                 selectedFragment = ParksFragment.newInstance();
 
+            } else {
+                selectedFragment = ReferenceFragment.newInstance();
             }
+
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.referenceContainerView, selectedFragment)
                     .commit();
