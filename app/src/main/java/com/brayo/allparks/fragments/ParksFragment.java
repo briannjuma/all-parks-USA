@@ -95,8 +95,6 @@ public class ParksFragment extends Fragment implements OnParkClickListener {
     }
 
     private void populateParks() {
-
-        parkList.clear();
         Repository.getParks(parks -> {
             parkRecyclerViewAdapter = new ParkRecyclerViewAdapter(parks, this);
             recyclerView.setAdapter(parkRecyclerViewAdapter);
