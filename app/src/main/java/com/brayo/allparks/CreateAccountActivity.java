@@ -83,13 +83,6 @@ public class CreateAccountActivity extends AppCompatActivity {
                             Toast.LENGTH_LONG)
                             .show();
                 }
-
-
-
-//                Intent intent = new Intent(CreateAccountActivity.this, CreateAccountActivity.class);
-//                startActivity(intent);
-//                Log.i(TAG, "Navigating to Main Activity ...");
-//                Toast.makeText(CreateAccountActivity.this, "Discover National Parks", Toast.LENGTH_SHORT).show();
             }
         });
     }
