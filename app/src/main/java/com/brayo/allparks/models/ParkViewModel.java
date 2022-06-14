@@ -27,6 +27,7 @@ public class ParkViewModel extends ViewModel {
 
     public LiveData<String> getCode() { return code; }
     public void selectCode(String c) {
+
         code.setValue(c);
     }
 }
