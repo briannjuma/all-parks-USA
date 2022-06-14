@@ -18,6 +18,7 @@ import com.brayo.allparks.databinding.ActivityMainBinding;
 import com.brayo.allparks.fragments.ParksFragment;
 import com.brayo.allparks.fragments.ReferenceFragment;
 import com.brayo.allparks.models.ParkViewModel;
+import com.brayo.allparks.util.UserApi;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         Log.i(TAG, "Main Activity opened");
 
         Bundle bundle = getIntent().getExtras();
+
         if (bundle != null) {
             String username = bundle.getString("username");
             String userId = bundle.getString("userId");
