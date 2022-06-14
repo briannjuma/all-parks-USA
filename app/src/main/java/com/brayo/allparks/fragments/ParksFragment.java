@@ -58,20 +58,7 @@ public class ParksFragment extends Fragment implements OnParkClickListener {
 
         super.onCreate(savedInstanceState);
         parkList = new ArrayList<>();
-
-        // search view widget
-//        cardView = getView().findViewById(R.id.cardview);
-//        stateCodeET = getView().findViewById(R.id.floating_state_value_et);
-//        searchButton = getView().findViewById(R.id.floating_search_button);
-//
-//        searchButton.setOnClickListener(v -> {
-//            String stateCode =stateCodeET.getText().toString().trim();
-//            if (!TextUtils.isEmpty(stateCode)) {
-//                code = stateCode;
-//                parkViewModel.selectCode(code);
-//                stateCodeET.setText("");
-//            }
-//        });
+        parkList.clear();
 
     }
 
@@ -99,7 +86,17 @@ public class ParksFragment extends Fragment implements OnParkClickListener {
         if (parkViewModel.getParks().getValue() != null) {
             parkList = parkViewModel.getParks().getValue();
 
+
+            Log.d("SIZE", "getParksPerState" +parkList.size());
+
         }
+        populateParks();
+
+    }
+
+    private void populateParks() {
+
+        parkList.clear();
         Repository.getParks(parks -> {
             parkRecyclerViewAdapter = new ParkRecyclerViewAdapter(parks, this);
             recyclerView.setAdapter(parkRecyclerViewAdapter);
@@ -121,6 +118,7 @@ public class ParksFragment extends Fragment implements OnParkClickListener {
     @Override
     public void onParkClicked(Park park) {
         Log.d("Park", "onParkClicked: " + park.getName());
+        cardView.setVisibility(View.GONE);
 
         parkViewModel.setSelectedPark(park);
         //noinspection deprecation
