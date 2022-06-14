@@ -79,6 +79,21 @@ public class ParksFragment extends Fragment implements OnParkClickListener {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+       //search view widget
+        cardView = view.findViewById(R.id.cardview);
+        stateCodeET = view.findViewById(R.id.floating_state_value_et);
+        searchButton = view.findViewById(R.id.floating_search_button);
+
+        searchButton.setOnClickListener(v -> {
+            String stateCode =stateCodeET.getText().toString().trim();
+            if (!TextUtils.isEmpty(stateCode)) {
+                code = stateCode;
+                parkViewModel.selectCode(code);
+                stateCodeET.setText("");
+            }
+        });
+
+
         parkViewModel = new ViewModelProvider(requireActivity())
                 .get(ParkViewModel.class);
         if (parkViewModel.getParks().getValue() != null) {
@@ -106,6 +121,7 @@ public class ParksFragment extends Fragment implements OnParkClickListener {
     @Override
     public void onParkClicked(Park park) {
         Log.d("Park", "onParkClicked: " + park.getName());
+
         parkViewModel.setSelectedPark(park);
         //noinspection deprecation
         getFragmentManager().beginTransaction()
