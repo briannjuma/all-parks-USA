@@ -71,5 +71,10 @@
     <string name="info_unavailable">Information not available</string>
     <string name="hint_search">Enter State code:TX for Texas</string>
     <string name="national_park">National Park</string>
+    <string name="email_hint">example@emailservice.com</string>
+    <string name="password_hint">Password</string>
+    <string name="login_text">Log In</string>
+    <string name="or_text">Or</string>
+    <string name="create_text">Create Account</string>
 
 </resources>
