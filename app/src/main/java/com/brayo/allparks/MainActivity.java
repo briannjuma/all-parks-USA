@@ -29,7 +29,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+
         Log.i(TAG, "Main Activity opened");
+
+        Bundle bundle = getIntent().getExtras();
+        if (bundle != null) {
+            String username = bundle.getString("username");
+            String userId = bundle.getString("userId");
+            setTitle("Welcome to All-parks " + username);
+        }
 
 
        // Fragment switching

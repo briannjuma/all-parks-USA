@@ -27,7 +27,7 @@ public class LoginActivity extends AppCompatActivity {
         binding.emailSignInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, LoginActivity.class);
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent);
                 Log.i(TAG,"Navigating to Main Activity ...");
                 Toast.makeText(LoginActivity.this,"Discover National Parks",Toast.LENGTH_SHORT).show();
