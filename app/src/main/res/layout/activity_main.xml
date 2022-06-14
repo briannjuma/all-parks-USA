@@ -8,16 +8,63 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
+<!--        <include-->
+<!--            layout="@layout/floating_search_bar"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
 
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/referenceContainerView"
-            android:name="com.brayo.allparks.fragments.ReferenceFragment"
-            android:layout_width="0dp"
-            android:layout_height="662dp"
-            app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview"
+            android:layout_width="319dp"
+            android:layout_height="68dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:visibility="visible"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/floating_state_value_et"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="@string/hint_search"
+                    android:inputType="textPersonName" />
+
+                <ImageButton
+                    android:id="@+id/floating_search_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_baseline_search_24"
+                    app:srcCompat="@drawable/ic_baseline_search_24" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/referenceContainerView"
+            android:name="com.brayo.allparks.fragments.ReferenceFragment">
+
+        </androidx.fragment.app.FragmentContainerView>
+
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_navigation"
