@@ -69,6 +69,7 @@
     <string name="textview">TextView</string>
     <string name="no_directions">Directions not available</string>
     <string name="info_unavailable">Information not available</string>
-    <string name="hint_search">Enter State code: WA for Washington</string>
+    <string name="hint_search">Enter State code:TX for Texas</string>
+    <string name="national_park">National Park</string>
 
 </resources>

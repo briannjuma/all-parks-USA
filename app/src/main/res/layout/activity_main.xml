@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
             android:shadowDy="4"
-            android:text="National Park"
+            android:text="@string/national_park"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.079"

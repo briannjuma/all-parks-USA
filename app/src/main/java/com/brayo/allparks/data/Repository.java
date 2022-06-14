@@ -1,5 +1,7 @@
 package com.brayo.allparks.data;
 
+import android.util.Log;
+
 import com.android.volley.Request;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.brayo.allparks.controller.AppController;
@@ -23,6 +25,7 @@ public class Repository {
     static List<Park> parkList = new ArrayList<>();
     public static void getParks(final AsyncResponse callback, String stateCode) {
         String url = Util.getParksUrl(stateCode);
+        Log.d("URL","getParks:" + url);
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url,null, response -> {
 
             try {

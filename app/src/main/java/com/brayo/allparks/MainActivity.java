@@ -23,11 +23,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
     private ParkViewModel parkViewModel;
-    private CardView cardView;
-    private EditText stateCodeET;
-    private ImageButton searchButton;
-    private String code;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,25 +32,7 @@ public class MainActivity extends AppCompatActivity {
         Log.i(TAG, "Main Activity opened");
 
 
-        // search view logic
-        // used findViewById since these views are included in a fragment that is not always present
-
-        cardView = findViewById(R.id.cardview);
-        stateCodeET = findViewById(R.id.floating_state_value_et);
-        searchButton = findViewById(R.id.floating_search_button);
-
-        searchButton.setOnClickListener(v -> {
-            String stateCode =stateCodeET.getText().toString().trim();
-            if (!TextUtils.isEmpty(stateCode)) {
-                code = stateCode;
-                parkViewModel.selectCode(code);
-                stateCodeET.setText("");
-
-            }
-        });
-
-
-        // Fragment switching
+       // Fragment switching
         Fragment referenceFragment = (Fragment) getSupportFragmentManager()
                 .findFragmentById(R.id.referenceContainerView);
         referenceFragment.getActivity();
