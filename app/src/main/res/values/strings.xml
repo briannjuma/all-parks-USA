@@ -5,7 +5,7 @@
     <string name="applicationDescriptionTextView">Discover the unique and beautiful nature, wildlife and culture in the heart of United States of America.</string>
     <string name="launcherButton">Get-Started</string>
     <string name="activity2Title">State Code Reference</string>
-    <string name="activity2Paragraph">A national park is an area set aside by a national government for the preservation of the natural environment. A national park may be set aside for public recreation and enjoyment or for its historical or scientific interest while keeping most landscapes and their accompanying plants and animals in their natural state.</string>
+    <string name="activity2Paragraph">A national park is an area set aside by a national government for the preservation of the natural environment.</string>
     <string name="activity2Button">Discover Parks</string>
     <string name="stateCodeHint">Provide username: jumaBrian</string>
     <string name="stateCode1">

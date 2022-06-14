@@ -24,6 +24,10 @@ public class MainActivity extends AppCompatActivity {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         Log.i(TAG, "Main Activity opened");
 
+        Fragment referenceFragment = (Fragment) getSupportFragmentManager()
+                .findFragmentById(R.id.referenceContainerView);
+        referenceFragment.getActivity();
+
 
         BottomNavigationView bottomNavigationView = binding.bottomNavigation;
         //noinspection deprecation
