@@ -6,15 +6,19 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.ImageButton;
 
 import com.brayo.allparks.R;
 import com.brayo.allparks.adapter.OnParkClickListener;
@@ -33,6 +37,10 @@ public class ParksFragment extends Fragment implements OnParkClickListener {
     private ParkRecyclerViewAdapter parkRecyclerViewAdapter;
     private List<Park> parkList;
     private ParkViewModel parkViewModel;
+    private CardView cardView;
+    private EditText stateCodeET;
+    private ImageButton searchButton;
+    private String code= "";
 
     public ParksFragment() {
         // Required empty public constructor
@@ -50,22 +58,48 @@ public class ParksFragment extends Fragment implements OnParkClickListener {
 
         super.onCreate(savedInstanceState);
         parkList = new ArrayList<>();
+        parkList.clear();
+
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+       //search view widget
+        cardView = view.findViewById(R.id.cardview);
+        stateCodeET = view.findViewById(R.id.floating_state_value_et);
+        searchButton = view.findViewById(R.id.floating_search_button);
+
+        searchButton.setOnClickListener(v -> {
+            String stateCode =stateCodeET.getText().toString().trim();
+            if (!TextUtils.isEmpty(stateCode)) {
+                code = stateCode;
+                parkViewModel.selectCode(code);
+                stateCodeET.setText("");
+            }
+        });
+
+
         parkViewModel = new ViewModelProvider(requireActivity())
                 .get(ParkViewModel.class);
         if (parkViewModel.getParks().getValue() != null) {
             parkList = parkViewModel.getParks().getValue();
+
+
+            Log.d("SIZE", "getParksPerState" +parkList.size());
+
         }
+        populateParks();
+
+    }
+
+    private void populateParks() {
         Repository.getParks(parks -> {
             parkRecyclerViewAdapter = new ParkRecyclerViewAdapter(parks, this);
             recyclerView.setAdapter(parkRecyclerViewAdapter);
 
-        });
+        }, code);
     }
 
     @Override
@@ -82,6 +116,8 @@ public class ParksFragment extends Fragment implements OnParkClickListener {
     @Override
     public void onParkClicked(Park park) {
         Log.d("Park", "onParkClicked: " + park.getName());
+        cardView.setVisibility(View.GONE);
+
         parkViewModel.setSelectedPark(park);
         //noinspection deprecation
         getFragmentManager().beginTransaction()

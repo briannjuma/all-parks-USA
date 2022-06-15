@@ -5,7 +5,7 @@
     <string name="applicationDescriptionTextView">Discover the unique and beautiful nature, wildlife and culture in the heart of United States of America.</string>
     <string name="launcherButton">Get-Started</string>
     <string name="activity2Title">State Code Reference</string>
-    <string name="activity2Paragraph">A national park is an area set aside by a national government for the preservation of the natural environment. A national park may be set aside for public recreation and enjoyment or for its historical or scientific interest while keeping most landscapes and their accompanying plants and animals in their natural state.</string>
+    <string name="activity2Paragraph">A national park is an area set aside by a national government for the preservation of the natural environment.</string>
     <string name="activity2Button">Discover Parks</string>
     <string name="stateCodeHint">Provide username: jumaBrian</string>
     <string name="stateCode1">
@@ -69,5 +69,13 @@
     <string name="textview">TextView</string>
     <string name="no_directions">Directions not available</string>
     <string name="info_unavailable">Information not available</string>
+    <string name="hint_search">Enter State code:TX for Texas</string>
+    <string name="national_park">National Park</string>
+    <string name="email_hint">example@emailservice.com</string>
+    <string name="password_hint">Password</string>
+    <string name="login_text">Log In</string>
+    <string name="or_text">Or</string>
+    <string name="create_text">Create Account</string>
+    <string name="username_hint">Username</string>
 
 </resources>
