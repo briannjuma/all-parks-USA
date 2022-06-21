@@ -7,6 +7,69 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
+        <ImageView
+            android:id="@+id/userProfileImageView"
+            android:layout_width="391dp"
+            android:layout_height="251dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/ic_twotone_account_circle_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.615"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/usernameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="28dp"
+            android:text="@string/username"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.051"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userProfileImageView" />
+
+        <EditText
+            android:id="@+id/userBioEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="32dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="@string/user_bio"
+            android:inputType="textMultiLine"
+            android:maxLines="4"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/usernameTextView" />
+
+        <ImageButton
+            android:id="@+id/addImageButton"
+            android:layout_width="118dp"
+            android:layout_height="97dp"
+            app:layout_constraintBottom_toBottomOf="@+id/userProfileImageView"
+            app:layout_constraintEnd_toEndOf="@+id/userProfileImageView"
+            app:layout_constraintStart_toStartOf="@+id/userProfileImageView"
+            app:layout_constraintTop_toTopOf="@+id/userProfileImageView"
+            app:srcCompat="@drawable/ic_baseline_photo_camera_24"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/saveUserButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="@string/save_profile"
+            android:textColor="@color/Encyloperdia"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
 <!--        <TextView-->
 <!--            android:id="@+id/textView6"-->
@@ -91,71 +154,6 @@
             app:menu="@menu/bottom_nav_menu" >
 
         </com.google.android.material.bottomnavigation.BottomNavigationView>
-
-            <ImageView
-                android:id="@+id/userProfileImageView"
-                android:layout_width="391dp"
-                android:layout_height="251dp"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/ic_twotone_account_circle_24"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.615"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/usernameTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="28dp"
-            android:text="@string/username"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.051"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/userProfileImageView" />
-
-        <EditText
-            android:id="@+id/userBioEditText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="32dp"
-            android:ems="10"
-            android:gravity="start|top"
-            android:hint="@string/user_bio"
-            android:inputType="textMultiLine"
-            android:maxLines="4"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/usernameTextView" />
-
-        <ImageButton
-            android:id="@+id/addImageButton"
-            android:layout_width="118dp"
-            android:layout_height="97dp"
-            app:layout_constraintBottom_toBottomOf="@+id/userProfileImageView"
-            app:layout_constraintEnd_toEndOf="@+id/userProfileImageView"
-            app:layout_constraintStart_toStartOf="@+id/userProfileImageView"
-            app:layout_constraintTop_toTopOf="@+id/userProfileImageView"
-            app:srcCompat="@drawable/ic_baseline_photo_camera_24"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-        <Button
-            android:id="@+id/saveUserButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:text="@string/save_profile"
-            android:textColor="@color/Encyloperdia"
-            app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

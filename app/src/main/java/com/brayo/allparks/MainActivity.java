@@ -26,7 +26,6 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.StorageReference;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private static final int REQUEST_IMAGE_CAPTURE = ;
     private ActivityMainBinding binding;
     private ParkViewModel parkViewModel;
 
@@ -130,9 +129,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void onLaunchCamera() {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        if (takePictureIntent.resolveActivity(getActivity().getPackageManager()) != null) {
-            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
-        }
+//        if (takePictureIntent.resolveActivity(getActivity().getPackageManager()) != null) {
+//            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+//        }
     }
 
     @Override
