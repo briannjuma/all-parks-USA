@@ -4,6 +4,8 @@
     package="com.brayo.allparks">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
+
 
     <application
         android:name=".controller.AppController"
