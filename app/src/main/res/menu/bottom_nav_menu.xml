@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/reference_nav_button"
-        android:icon="@drawable/ic_baseline_menu_book_24"
-        app:showAsAction="ifRoom"
-        android:title="@string/map_nav_button" />
+        android:id="@+id/user_nav_button"
+        android:icon="@drawable/ic_baseline_account_box_24"
+        android:title="@string/map_nav_button"
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/parks_nav_button"
         android:icon="@drawable/ic_baseline_nature_people_24"

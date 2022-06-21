@@ -3,14 +3,9 @@ package com.brayo.allparks;
 import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
 
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
@@ -18,7 +13,6 @@ import com.brayo.allparks.databinding.ActivityMainBinding;
 import com.brayo.allparks.fragments.ParksFragment;
 import com.brayo.allparks.fragments.ReferenceFragment;
 import com.brayo.allparks.models.ParkViewModel;
-import com.brayo.allparks.util.UserApi;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -55,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
             int id = item.getItemId();
 
-            if (id == R.id.reference_nav_button) {
+            if (id == R.id.user_nav_button) {
                 // show reference fragment
                 selectedFragment = ReferenceFragment.newInstance();
 
