@@ -2,6 +2,8 @@ package com.brayo.allparks.fragments;
 
 import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -19,6 +21,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.brayo.allparks.R;
 import com.brayo.allparks.adapter.OnParkClickListener;
@@ -33,6 +36,7 @@ import java.util.List;
 
 
 public class ParksFragment extends Fragment implements OnParkClickListener {
+    private static final String MESSAGE_ID = "message_prefs";
     private RecyclerView recyclerView;
     private ParkRecyclerViewAdapter parkRecyclerViewAdapter;
     private List<Park> parkList;
@@ -40,6 +44,7 @@ public class ParksFragment extends Fragment implements OnParkClickListener {
     private CardView cardView;
     private EditText stateCodeET;
     private ImageButton searchButton;
+    private TextView showMessage;
     private String code= "";
 
     public ParksFragment() {
@@ -70,15 +75,30 @@ public class ParksFragment extends Fragment implements OnParkClickListener {
         cardView = view.findViewById(R.id.cardview);
         stateCodeET = view.findViewById(R.id.floating_state_value_et);
         searchButton = view.findViewById(R.id.floating_search_button);
+        showMessage = view.findViewById(R.id.sharedPreference_textView);
 
         searchButton.setOnClickListener(v -> {
             String stateCode =stateCodeET.getText().toString().trim();
+
+            SharedPreferences sharedPreferences = this.getActivity().getSharedPreferences(MESSAGE_ID, Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString("stateCode", stateCode);
+            //  saving to disk
+            editor.apply();
+
             if (!TextUtils.isEmpty(stateCode)) {
                 code = stateCode;
                 parkViewModel.selectCode(code);
                 stateCodeET.setText("");
             }
         });
+
+        // Get data back from shared preferences
+        SharedPreferences getShareData = this.getActivity().getSharedPreferences(MESSAGE_ID, Context.MODE_PRIVATE);
+        String value = getShareData.getString("stateCode", "State not specified yet: Shared Preferences");
+
+        showMessage.setText(value);
+
 
 
         parkViewModel = new ViewModelProvider(requireActivity())
@@ -101,7 +121,6 @@ public class ParksFragment extends Fragment implements OnParkClickListener {
 
         }, code);
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
