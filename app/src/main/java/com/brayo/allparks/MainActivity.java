@@ -4,7 +4,9 @@ import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
@@ -13,11 +15,31 @@ import com.brayo.allparks.databinding.ActivityMainBinding;
 import com.brayo.allparks.fragments.ParksFragment;
 import com.brayo.allparks.fragments.ReferenceFragment;
 import com.brayo.allparks.models.ParkViewModel;
+import com.brayo.allparks.util.UserApi;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.storage.StorageReference;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private ActivityMainBinding binding;
     private ParkViewModel parkViewModel;
+
+    private String currentUserId;
+    private String currentUserName;
+
+    private FirebaseAuth firebaseAuth;
+    private FirebaseAuth.AuthStateListener authStateListener;
+    private FirebaseUser user;
+
+    // Connection to Firestore
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private StorageReference storageReference;
+
+    private CollectionReference collectionReference = db.collection("UserProfile");
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,13 +49,34 @@ public class MainActivity extends AppCompatActivity {
 
         Log.i(TAG, "Main Activity opened");
 
-        Bundle bundle = getIntent().getExtras();
+        // User Profile
+        firebaseAuth = FirebaseAuth.getInstance();
 
-        if (bundle != null) {
-            String username = bundle.getString("username");
-            String userId = bundle.getString("userId");
-            setTitle("Welcome to All-parks " + username);
+        // fetch and display username from remote
+        if (UserApi.getInstance() != null) {
+            currentUserId = UserApi.getInstance().getUserId();
+            currentUserName = UserApi.getInstance().getUsername();
+
+            binding.usernameTextView.setText(currentUserName);
         }
+
+        authStateListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                user = firebaseAuth.getCurrentUser();
+                if (user != null) {
+
+                }else{
+
+                }
+            }
+        };
+
+        binding.saveUserButton.setOnClickListener(this);
+        binding.addImageButton.setOnClickListener(this);
+
+
+
 
 
        // Fragment switching
@@ -67,5 +110,22 @@ public class MainActivity extends AppCompatActivity {
 
             return true;
         });
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.saveUserButton:
+                // save user profile
+                break;
+            case R.id.addImageButton:
+                // utilize camera
+                break;
+        }
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
     }
 }
