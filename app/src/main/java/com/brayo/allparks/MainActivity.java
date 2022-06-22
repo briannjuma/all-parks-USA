@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,6 +27,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.StorageReference;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    private static final int REQUEST_IMAGE_CAPTURE = 111;
     private ActivityMainBinding binding;
     private ParkViewModel parkViewModel;
 
@@ -74,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         };
 
-        binding.saveUserButton.setOnClickListener(this);
+//        binding.saveUserButton.setOnClickListener(this);
         binding.addImageButton.setOnClickListener(this);
 
 
@@ -117,21 +119,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.saveUserButton:
-                // save user profile
-                break;
+//            case R.id.saveUserButton:
+//                // save user profile
+//                break;
             case R.id.addImageButton:
                 // utilize camera
                 onLaunchCamera();
+                Toast.makeText(MainActivity.this, "Launching Camera",Toast.LENGTH_SHORT)
+                        .show();
                 break;
         }
     }
 
     private void onLaunchCamera() {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-//        if (takePictureIntent.resolveActivity(getActivity().getPackageManager()) != null) {
-//            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
-//        }
+        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+        }
     }
 
     @Override
