@@ -22,7 +22,23 @@
 
 
         <TextView
+            android:id="@+id/showBio"
+            style="@style/LauncherParagraph"
+            android:layout_width="0dp"
+            android:layout_height="122dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:textAlignment="textStart"
+            app:layout_constraintBottom_toTopOf="@+id/userBioEditText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/usernameTextView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
             android:id="@+id/usernameTextView"
+            style="@style/launcherText"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_marginStart="32dp"
@@ -39,16 +55,18 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="232dp"
             android:layout_marginEnd="32dp"
+            android:layout_marginBottom="60dp"
             android:ems="10"
             android:gravity="start|top"
             android:hint="@string/user_bio"
             android:inputType="textMultiLine"
             android:maxLines="4"
             android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/usernameTextView" />
 
@@ -131,8 +149,8 @@
             android:name="com.brayo.allparks.fragments.ReferenceFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:layout_editor_absoluteX="-7dp"
-            tools:layout_editor_absoluteY="0dp">
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="-29dp">
 
         </androidx.fragment.app.FragmentContainerView>
 

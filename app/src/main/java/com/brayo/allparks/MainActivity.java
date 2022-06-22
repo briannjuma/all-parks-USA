@@ -2,7 +2,9 @@ package com.brayo.allparks;
 
 import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
@@ -28,6 +30,7 @@ import com.google.firebase.storage.StorageReference;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private static final int REQUEST_IMAGE_CAPTURE = 111;
+    private static final String PROFILE_ID = "profile_prefs";
     private ActivityMainBinding binding;
     private ParkViewModel parkViewModel;
 
@@ -104,6 +107,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 // show Park fragment
                 selectedFragment = ParksFragment.newInstance();
 
+                // FILLING IN USER BIO
+                String editBio = binding.userBioEditText.getText().toString().trim();
+
+                SharedPreferences sharedPreferences = getSharedPreferences(PROFILE_ID, Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("editBio", editBio);
+                //  saving to disk
+                editor.apply();
+
             } else {
                 selectedFragment = ReferenceFragment.newInstance();
             }
@@ -114,6 +126,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             return true;
         });
+        SharedPreferences getShareData = getSharedPreferences(PROFILE_ID, Context.MODE_PRIVATE);
+        String value = getShareData.getString("editBio", "User Bio appears here through shared preference");
+
+        binding.showBio.setText(value);
     }
 
     @Override

@@ -78,7 +78,7 @@
     <string name="create_text">Create Account</string>
     <string name="username_hint">Username</string>
     <string name="save_profile">Save Profile</string>
-    <string name="user_bio">User Bio</string>
+    <string name="user_bio">Tell us something interesting about you:e.g. I love camping</string>
     <string name="username">username</string>
 
 </resources>

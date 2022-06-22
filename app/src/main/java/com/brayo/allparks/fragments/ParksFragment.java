@@ -71,16 +71,16 @@ public class ParksFragment extends Fragment implements OnParkClickListener {
         cardView = view.findViewById(R.id.cardview);
         stateCodeET = view.findViewById(R.id.floating_state_value_et);
         searchButton = view.findViewById(R.id.floating_search_button);
-        showMessage = view.findViewById(R.id.sharedPreference_textView);
+//        showMessage = view.findViewById(R.id.sharedPreference_textView);
 
         searchButton.setOnClickListener(v -> {
             String stateCode = stateCodeET.getText().toString().trim();
 
-            SharedPreferences sharedPreferences = this.getActivity().getSharedPreferences(MESSAGE_ID, Context.MODE_PRIVATE);
-            SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putString("stateCode", stateCode);
-            //  saving to disk
-            editor.apply();
+//            SharedPreferences sharedPreferences = this.getActivity().getSharedPreferences(MESSAGE_ID, Context.MODE_PRIVATE);
+//            SharedPreferences.Editor editor = sharedPreferences.edit();
+//            editor.putString("stateCode", stateCode);
+//            //  saving to disk
+//            editor.apply();
 
             if (!TextUtils.isEmpty(stateCode)) {
                 code = stateCode;
@@ -90,10 +90,10 @@ public class ParksFragment extends Fragment implements OnParkClickListener {
         });
 
         // Get data back from shared preferences
-        SharedPreferences getShareData = this.getActivity().getSharedPreferences(MESSAGE_ID, Context.MODE_PRIVATE);
-        String value = getShareData.getString("stateCode", "State not specified yet: Shared Preferences");
-
-        showMessage.setText(value);
+//        SharedPreferences getShareData = this.getActivity().getSharedPreferences(MESSAGE_ID, Context.MODE_PRIVATE);
+//        String value = getShareData.getString("stateCode", "State not specified yet: Shared Preferences");
+//
+//        showMessage.setText(value);
 
 
         parkViewModel = new ViewModelProvider(requireActivity())
