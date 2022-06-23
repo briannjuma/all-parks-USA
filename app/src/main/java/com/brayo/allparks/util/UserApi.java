@@ -21,6 +21,7 @@ public class UserApi extends Application {
         this.username = username;
     }
 
+    public String getUserId() {return userId;}
     public void setUserId(String userId) { this.userId = userId;
     }
 }

@@ -124,12 +124,12 @@ public class CreateAccountActivity extends AppCompatActivity {
                                                                     userApi.setUsername(name);
 
 
-                                                                    Intent intent = new Intent(CreateAccountActivity.this, MainActivity.class);
+                                                                    Intent intent = new Intent(CreateAccountActivity.this, LoginActivity.class);
                                                                     intent.putExtra("username", name);
                                                                     intent.putExtra("userId",currentUserId);
                                                                     startActivity(intent);
-                                                                    Log.i(TAG, "Navigating to Main Activity ...");
-                                                                    Toast.makeText(CreateAccountActivity.this, "Discover All National Parks USA", Toast.LENGTH_SHORT).show();
+                                                                    Log.i(TAG, "Navigating to Log in Activity ...");
+//                                                                    Toast.makeText(CreateAccountActivity.this, "Discover All National Parks USA", Toast.LENGTH_SHORT).show();
 
                                                                 } else {
                                                                     binding.createActtProgress.setVisibility(View.INVISIBLE);
