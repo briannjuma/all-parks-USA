@@ -3,17 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ic_twotone_account_circle_24.xml" value="0.37" />
+        <entry key="app/src/main/res/layout/activity_create_account.xml" value="0.13360507246376813" />
         <entry key="app/src/main/res/layout/activity_launcher.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="app/src/main/res/layout/activity_park_list.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_statereference.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/activity_userprofile.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/floating_search_bar.xml" value="0.18072916666666666" />
         <entry key="app/src/main/res/layout/fragment_details.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/fragment_parks.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/fragment_reference.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/park_row.xml" value="0.18072916666666666" />
         <entry key="app/src/main/res/layout/view_pager_row.xml" value="0.18072916666666666" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.18072916666666666" />
+        <entry key="app/src/main/res/xml/file_paths.xml" value="0.5664160401002506" />
       </map>
     </option>
   </component>
@@ -22,5 +27,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.2" />
+      </ProjectState>
+    </option>
   </component>
 </project>

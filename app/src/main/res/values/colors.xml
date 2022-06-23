@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="Encyloperdia">#2F5233</color>
     <color name="Pantone">#B2D2A4</color>
+    <color name="loader">#DCDCDC</color>
 </resources>

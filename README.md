@@ -11,7 +11,8 @@ Users will be able to :~
 
 ## User Journey Demo
   <video src= "https://user-images.githubusercontent.com/98020785/172264323-850fdbb0-6faa-419d-ab85-dd512beb421f.mp4" controls></video>
-
+  <video src= "https://user-images.githubusercontent.com/98020785/172588575-dafa0bc6-ff2f-40f5-898c-1cb0d826aff5.mp4" controls></video>
+  
 ## Prerequisites
 To make use of this repository you should have the following installed on your machine.
 * Android Studio - official IDE for android development.

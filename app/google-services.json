@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "213676368673",
+    "project_id": "all-parks",
+    "storage_bucket": "all-parks.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:213676368673:android:acbc7a00fd26c946b91460",
+        "android_client_info": {
+          "package_name": "com.brayo.allparks"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "213676368673-qm1qt3lttc319p8pro12dscnbjkgvsat.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSYovbLMRI-rq8NVemNfvhX2BKTUvQxOc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "213676368673-qm1qt3lttc319p8pro12dscnbjkgvsat.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

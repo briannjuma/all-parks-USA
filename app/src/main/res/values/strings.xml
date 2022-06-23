@@ -5,7 +5,7 @@
     <string name="applicationDescriptionTextView">Discover the unique and beautiful nature, wildlife and culture in the heart of United States of America.</string>
     <string name="launcherButton">Get-Started</string>
     <string name="activity2Title">State Code Reference</string>
-    <string name="activity2Paragraph">A national park is an area set aside by a national government for the preservation of the natural environment. A national park may be set aside for public recreation and enjoyment or for its historical or scientific interest while keeping most landscapes and their accompanying plants and animals in their natural state.</string>
+    <string name="activity2Paragraph">A national park is an area set aside by a national government for the preservation of the natural environment.</string>
     <string name="activity2Button">Discover Parks</string>
     <string name="stateCodeHint">Provide username: jumaBrian</string>
     <string name="stateCode1">
@@ -61,7 +61,7 @@
     \n    50 	Wisconsin   -   WI
     \n    51 	Wyoming     -   WY
     </string>
-    <string name="map_nav_button">Catalogue</string>
+    <string name="map_nav_button">My Profile</string>
     <string name="parks_nav_button">Parks</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -69,5 +69,17 @@
     <string name="textview">TextView</string>
     <string name="no_directions">Directions not available</string>
     <string name="info_unavailable">Information not available</string>
+    <string name="hint_search">Enter State code:TX for Texas</string>
+    <string name="national_park">National Park</string>
+    <string name="email_hint">example@emailservice.com</string>
+    <string name="password_hint">Password</string>
+    <string name="login_text">Log In</string>
+    <string name="or_text">Or</string>
+    <string name="create_text">Create Account</string>
+    <string name="username_hint">Username</string>
+    <string name="save_profile">Save Profile</string>
+    <string name="user_bio">Tell us something interesting about you:e.g. I love camping</string>
+    <string name="username">username</string>
+    <string name="cameraPermissionResponse">Can\'t open the camera without permission</string>
 
 </resources>
