@@ -80,5 +80,6 @@
     <string name="save_profile">Save Profile</string>
     <string name="user_bio">Tell us something interesting about you:e.g. I love camping</string>
     <string name="username">username</string>
+    <string name="cameraPermissionResponse">Can\'t open the camera without permission</string>
 
 </resources>
