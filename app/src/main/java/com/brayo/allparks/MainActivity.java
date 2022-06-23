@@ -5,6 +5,7 @@ import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
@@ -42,10 +44,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private FirebaseUser user;
 
     // Connection to Firestore
-    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private final FirebaseFirestore db = FirebaseFirestore.getInstance();
     private StorageReference storageReference;
 
-    private CollectionReference collectionReference = db.collection("UserProfile");
+    private final CollectionReference collectionReference = db.collection("UserProfile");
 
 
     @Override
@@ -73,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 user = firebaseAuth.getCurrentUser();
                 if (user != null) {
 
-                }else{
+                } else {
 
                 }
             }
@@ -83,11 +85,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         binding.addImageButton.setOnClickListener(this);
 
 
-
-
-
-       // Fragment switching
-        Fragment referenceFragment = (Fragment) getSupportFragmentManager()
+        // Fragment switching
+        Fragment referenceFragment = getSupportFragmentManager()
                 .findFragmentById(R.id.referenceContainerView);
         referenceFragment.getActivity();
 
@@ -141,7 +140,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.addImageButton:
                 // utilize camera
                 onLaunchCamera();
-                Toast.makeText(MainActivity.this, "Launching Camera",Toast.LENGTH_SHORT)
+                Toast.makeText(MainActivity.this, "Launching Camera", Toast.LENGTH_SHORT)
                         .show();
                 break;
         }
@@ -166,6 +165,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onStop();
         if (firebaseAuth != null) {
             firebaseAuth.removeAuthStateListener(authStateListener);
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+            Bundle extras = data.getExtras();
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
+            binding.userProfileImageView.setImageBitmap(imageBitmap);
+            //      encodeBitmapAndSaveToFirebase(imageBitmap);
         }
     }
 }
